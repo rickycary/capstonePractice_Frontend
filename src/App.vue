@@ -3,7 +3,7 @@
 import { ref, onBeforeMount } from 'vue';
 import Form from "./components/Form.vue"
 
-const url = "http://localhost:4000/todo"
+const url = "https://capstonepractice-backend.onrender.com/todo"
 const todos = ref([])
 const showForm = ref(false)
 const reminder = ref("")
