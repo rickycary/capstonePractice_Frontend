@@ -3,7 +3,7 @@
 import { ref, onBeforeMount } from 'vue';
 import Form from "./components/Form.vue"
 
-const url = "https://capstonepractice-backend.onrender.com/todo"
+const url = "http://localhost:4000/todo"
 const todos = ref([])
 const showForm = ref(false)
 const reminder = ref("")
@@ -11,7 +11,7 @@ const completed = ref(false)
 const _id = ref(null)
 const action = ref("create")
 
-const getTodos = async function() {
+const getTodos = async () => {
   const response = await fetch(url)
   const data = await response.json()
   todos.value = data
